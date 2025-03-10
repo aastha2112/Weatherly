@@ -1,12 +1,52 @@
-# React + Vite
+# Weatherly
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Weatherly is a dynamic weather application that provides real-time weather updates for cities worldwide. The app features an intuitive UI to enhance the user experience.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Search Functionality:** Users can search for weather details of any city.
+- **Real-Time Weather Updates:** Fetches live weather data using OpenWeather API.
+- **Temperature & Wind Details:** Displays temperature, humidity, wind speed, and sunrise time.
+- **Responsive Design:** Works seamlessly across devices.
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Frontend:** React, Tailwind CSS, Framer Motion
+- **State Management:** useState, useEffect
+- **API Handling:** Axios, OpenWeather API
+
+## Installation
+
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/your-username/weatherly.git
+   ```
+2. Navigate to the project folder:
+   ```sh
+   cd weatherly
+   ```
+3. Install dependencies:
+   ```sh
+   npm install
+   ```
+4. Create a `.env` file and add your OpenWeather API key:
+   ```sh
+   VITE_WEATHER_API=your_api_key_here
+   ```
+5. Start the development server:
+   ```sh
+   npm run dev
+   ```
+
+## Usage
+
+- Enter a city name in the search bar and click the search icon.
+- The app will display real-time weather details along with weather effects.
+
+## License
+
+This project is licensed under the MIT License.
+
+---
+
+Feel free to contribute and improve **Weatherly**! 🌦️🚀
