@@ -8,9 +8,106 @@
 
 body {
   height: 100vh;
-  background-image: radial-gradient(
+  background-color: #e6edf5;
+  background-color: #323846;
+  /* background-image: radial-gradient(
     circle 382px at 50% 50.2%,
     rgba(73, 76, 212, 1) 0.1%,
     rgba(3, 1, 50, 1) 100.2%
-  );
+  ); */
+}
+
+/* ☁️ Fluffy Moving Clouds */
+@keyframes moveClouds {
+  from {
+    transform: translateX(100vw);
+  }
+  to {
+    transform: translateX(-100vw);
+  }
+}
+
+.cloud-animation {
+  position: absolute;
+  top: 10%;
+  left: 0;
+  width: 150vw;
+  height: 200px;
+  background-image: url("/assets/clouds.png"); /* Add cartoon cloud image */
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation: moveClouds 30s linear infinite;
+  opacity: 0.8;
+}
+
+/* 🌧 Wavy Raindrops */
+@keyframes rainFall {
+  0% {
+    background-position: 0 -100%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+.rain-animation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("/assets/rain.png"); /* Add cartoon rain image */
+  background-size: 5%;
+  background-repeat: repeat;
+  animation: rainFall 1s linear infinite;
+  opacity: 0.6;
+}
+
+/* ❄ Falling Snowflakes */
+@keyframes snowFall {
+  0% {
+    transform: translateY(0px);
+    opacity: 0.9;
+  }
+  100% {
+    transform: translateY(100px);
+    opacity: 0.4;
+  }
+}
+
+.snow-animation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("/assets/snowflake.png"); /* Add cartoon snowflake image */
+  background-size: 4%;
+  background-repeat: repeat;
+  animation: snowFall 2s linear infinite;
+  opacity: 0.7;
+}
+
+/* 🌫 Soft Floating Mist */
+@keyframes mistFlow {
+  0% {
+    opacity: 0.2;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0.5;
+    transform: scale(1.1);
+  }
+}
+
+.mist-animation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("/assets/mist.png"); /* Add cartoon mist image */
+  background-size: cover;
+  animation: mistFlow 6s ease-in-out infinite alternate;
+  opacity: 0.5;
 }
