@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Navbar from "./components/Navbar/Navbar";
 import "./App.css";
 import Dashboard from "./components/Dashboard/Dashboard";
 import axios from "axios";
@@ -17,7 +16,6 @@ const App = () => {
         const response = await axios.get(
           `https://api.openweathermap.org/data/2.5/weather?q=${city},in&APPID=${API_KEY}&units=metric`
         );
-        console.log(response.data);
         setWeather(response.data);
       } catch (error) {
         console.error("Error fetching weather:", error);

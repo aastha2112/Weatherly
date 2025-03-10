@@ -7,13 +7,13 @@ const SearchBar = ({ onSearch }) => {
   const handleSearch = () => {
     if (query.trim() !== "") {
       onSearch(query);
-      setQuery(""); // Clear input after search
+      setQuery("");
     }
   };
 
   const handleKeyPress = (e) => {
     if (e.key === "Enter") {
-      e.preventDefault(); // Prevent form submission behavior
+      e.preventDefault();
       handleSearch();
     }
   };
@@ -26,7 +26,7 @@ const SearchBar = ({ onSearch }) => {
           placeholder="Search city..."
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          onKeyDown={handleKeyPress} // Search on Enter
+          onKeyDown={handleKeyPress}
           className="w-full px-4 py-2 pr-12 rounded-full bg-gray-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
         <button
